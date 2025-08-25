@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Connecting to customer service......</title>
+    <script>
+        // 1. 替换成你的所有客服链接，用英文逗号分隔，最后一个链接后不加逗号
+        const serviceLinks = [
+            "https://m.me/748789254974462",  // 客服A链接
+            "https://m.me/695695336962588",  // 客服B链接
+            "https://m.me/644378398769030",  // 客服B链接
+            "https://m.me/729672140224723",  // 客服B链接
+            "https://m.me/725900477279490",  // 客服B链接
+            "https://m.me/724612854068919",  // 客服B链接
+            "https://m.me/714597661744416"   // 客服C链接（可继续添加更多）
+        ];
+
+        // 2. 随机选择一个链接并自动跳转
+        function randomJump() {
+            const randomIndex = Math.floor(Math.random() * serviceLinks.length); // 随机生成索引
+            const targetLink = serviceLinks[randomIndex]; // 选中随机链接
+            window.location.href = targetLink; // 自动跳转
+        }
+
+        // 3. 页面加载完成后立即执行跳转（无需用户再点击）
+        window.onload = randomJump;
+    </script>
+</head>
+<body>
+    <!-- 可选：添加加载提示，避免用户以为页面卡住 -->
+    <div style="text-align:center; margin-top:50px; font-size:16px;">
+        We are matching you with customer service, please wait...
+    </div>
+</body>
+</html>
